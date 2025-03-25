@@ -2,32 +2,23 @@
     margin: 0%;
     padding: 0;
 }
-header,.category{
-    padding: 1.5rem 0;
+header{
+    padding: 1.5rem 6rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    background-color: rgb(255 87 87);;
+    background-color: rgb(255 87 87);
+}
 
-}
-.category{
-    width: 28%;
-    list-style: none;
-    color: #000;
-    /* background-color: rgba(0, 0, 0, 0.445); */
-    padding: 0;
-    font-size: 1.5rem;
-    font-weight: 500;
-    /* display: ; */
-}
-#search-bar{
-    background-color: blue;
-}
 .search{
+    width: 70%;
+}
+.search,.search-btn{
     padding: .5rem;
     border-radius: 5px;
     border: none;
     outline: none;
+    cursor: pointer;
 }
 
 .recipe-container {
@@ -44,6 +35,7 @@ header,.category{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease; 
     position: relative;
+    cursor: pointer;
 }
 
 .recipe-data:hover {
@@ -74,6 +66,21 @@ header,.category{
     transition: transform 09s ease; 
     background-color: rgba(0, 0, 0, 0.1);
 }
+.filterbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+}
+.filtercountry{
+    background-color: #e06262fa;
+    color: #fff;
+    border: none;
+    padding: .6rem;
+    margin: 1rem;
+    border-radius: 8px;
+}
 
 .scroll-recipe {
     width: 80%;
@@ -90,7 +97,7 @@ header,.category{
     scrollbar-color: #ff5757 #f0f0f0;
 }
 
-/* For Chrome, Edge, and Safari */
+
 .scroll-recipe::-webkit-scrollbar {
     height: 8px;
 }
@@ -106,13 +113,14 @@ header,.category{
 }
 
 .recipe-scroll {
-    min-width: 250px; /* Fixed width for each scroll item */
-    height: 150px; /* Fixed height */
+    min-width: 250px; 
+    height: 150px; 
     position: relative;
-    flex-shrink: 0; /* Prevent items from shrinking */
+    flex-shrink: 0; 
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 
 .recipe-scroll img {
@@ -154,7 +162,7 @@ header,.category{
     font-weight: bold; 
     cursor: pointer; 
     display: block; 
-    margin: 0 auto; 
+    margin: 1rem auto; 
     font-size: 1rem;
     transition: all 0.3s ease; 
     box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
@@ -165,4 +173,92 @@ header,.category{
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
 }
+.popup{
+    width: 40%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+}
 
+
+.loader-container {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.loader {
+    border: 8px solid #f3f3f3; 
+    border-top: 8px solid #3498db; 
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+.popup {
+    position: absolute; 
+    background-color: #fff; 
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    width: 350px;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+.popup h1 {
+    font-size: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+
+.popup img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+
+.popup p {
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    color: #e74c3c;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+.popup-xmark {
+    position: absolute; 
+    top: 10px; 
+    right: 10px; 
+    font-size: 20px; 
+    color: #e74c3c; 
+    cursor: pointer;
+    z-index: 10; 
+}
+
+.popup-xmark:hover {
+    color: #c0392b;
+}
+ 
