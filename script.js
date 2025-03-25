@@ -256,11 +256,14 @@ async function searchAndCuisine(search, country) {
 
 document.querySelector('.search-btn').addEventListener('click', () => {
     let inputValue = document.querySelector('.search').value.trim();
+    loader.style.display = 'block'; 
     searchAndCuisine(search = `${inputValue}`);
+   
 });
 
 document.querySelector('.add-more').addEventListener('click', () => {
     addNumber += 12;
+    loader.style.display = 'block'; 
     recipeData();
 });
 
