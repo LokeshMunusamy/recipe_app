@@ -20,7 +20,7 @@
 
 
 
-// let apiKey = '059bae3dc36242be90a54696706936f8';
+let apiKey = '059bae3dc36242be90a54696706936f8';
 let apiUrl = 'https://api.spoonacular.com/recipes/random'; 
 let cuisinesLink = 'https://api.spoonacular.com/recipes/complexSearch';
 
